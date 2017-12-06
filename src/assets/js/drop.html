@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)file:///C:/Users/Veda/Desktop/dropdown.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>drop</title>
+    <style>
+        .drop {
+            padding: 50px;
+        }
+
+        .drop1,
+        .drop2 {
+            width: 50%;
+        }
+
+        .select1 {
+            height: 50px;
+            float: left;
+            margin-top: -63px;
+            margin-left: 26%
+        }
+
+        .select2 {
+            height: 50px;
+            float: left;
+            margin-top: -63px;
+            margin-left: 26%
+        }
+
+        .group {
+            width: 90%;
+            position: relative;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .left-margin {
+            margin: 0px 0px 30px 100px;
+        }
+
+        .group input {
+            font-size: 18px;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 230px;
+            border: none;
+            border-bottom: 1px solid #757575;
+        }
+
+        .group input:focus {
+            outline: none;
+            border-bottom: none;
+            color: none;
+        }
+
+        label {
+            color: #999;
+            font-size: 15px;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 10px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+        }
+
+        input:focus~label,
+        input:valid~label {
+            top: -5px;
+            font-size: 10px;
+        }
+
+        .bar {
+            position: relative;
+            display: block;
+            width: 230px;
+        }
+
+        .bar:before,
+        .bar:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 1px;
+            border-bottom: none !important;
+            position: absolute;
+            background: #42A5F5;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+        }
+
+        .bar:before {
+            left: 50%;
+        }
+
+        .bar:after {
+            right: 50%;
+        }
+
+        input:focus~.bar:before,
+        input:focus~.bar:after {
+            width: 50%;
+        }
+
+        .highlight {
+            position: absolute;
+            height: 60%;
+            width: 100px;
+            top: 25%;
+            left: 0;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        input:focus~.highlight {
+            -webkit-animation: inputHighlighter 0.3s ease;
+            -moz-animation: inputHighlighter 0.3s ease;
+            animation: inputHighlighter 0.3s ease;
+        }
+
+        .arrow-down {
+            width: 0;
+            /* height: 10px; */
+            margin-top: 8px;
+            margin-left: 5px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid #8f9297;
+            cursor: pointer;
+            -webkit-transform: scaleX(0.7);
+            -moz-transform: scaleX(0.7);
+            float: right;
+            margin-right: 14px;
+        }
+
+        .arrow-up {
+            width: 0;
+            height: 10px;
+            margin-top: 8px;
+            margin-left: 5px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 7px solid #8f9297;
+            cursor: pointer;
+            -webkit-transform: scaleX(0.7);
+            -moz-transform: scaleX(0.7);
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row drop">
+        <div class="col-xs-12 col-sm-5 col-lg-5 col-md-5 drop1">
+            <div class="group left-margin">
+                <input type="text" required="" class="empty">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Category</label>
+            </div>
+        </div>
+        <div class="ui fluid dropdown selection multiple" tabindex="0" style="
+    min-width: 50%;
+"><select name="skills" multiple="">
+            <option value="">Skills</option>
+            <option value="angular">Angular</option>
+            <option value="css">CSS</option>
+            <option value="design">Graphic Design</option>
+            <option value="ember">Ember</option>
+            <option value="html">HTML</option>
+            <option value="ia">Information Architecture</option>
+            <option value="javascript">Javascript</option>
+            <option value="mech">Mechanical Engineering</option>
+            <option value="meteor">Meteor</option>
+            <option value="node">NodeJS</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="python">Python</option>
+            <option value="rails">Rails</option>
+            <option value="react">React</option>
+            <option value="repair">Kitchen Repair</option>
+            <option value="ruby">Ruby</option>
+            <option value="ui">UI Design</option>
+            <option value="ux">User Experience</option>
+            
+                    
+                    
+                                
+            Skills
+            
+                Angular
+                CSS
+                Graphic Design
+                Ember
+                HTML
+                Information Architecture
+                Javascript
+                Mechanical Engineering
+                Meteor
+                NodeJS
+                Plumbing
+                Python
+                Rails
+                React
+                Kitchen Repair
+                Ruby
+                UI Design
+                User Experience
+            
+        
+            
+    
+    
+    
+    <!-- <div class="col-xs-12 col-sm-5 col-lg-5 col-md-5 drop2">
+        <div class="group left-margin">
+            <input type="text" required class="empty">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Category</label>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-1 col-lg-1 col-md-1 select2">
+        <div class="arrow-down" id="c2"></div>
+        <div class="arrow-up" id="d2"></div>
+    </div> -->
+
+
+
+<script src="./drop_files/jquery-3.2.1.min.js.download" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $('#d1').click(function () {
+            $(this).hide();
+            $("#c1").show();
+        });
+        $('#d2').click(function () {
+            $(this).hide();
+            $("#c2").show();
+        });
+        $(".arrow-down").hide();
+    });
+
+</script>
+
+</select></div></div></body></html>

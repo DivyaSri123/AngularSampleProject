@@ -1,0 +1,25 @@
+
+
+@font-face {
+  font-family: 'Calibri';
+  src: url('Calibri.eot');
+  src: url('Calibri.woff2') format('woff2'),
+       url('Calibri.woff') format('woff'),
+       url('Calibri.svg#Calibri') format('svg'),
+       url('Calibri.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Radikal-Bold';
+  src: url('Radikal-Bold.eot');
+  src: url('Radikal-Bold.woff2') format('woff2'),
+       url('Radikal-Bold.woff') format('woff'),
+       url('Radikal-Bold.ttf') format('truetype'),
+       url('Radikal-Bold.svg#Radikal-Bold') format('svg'),
+       url('Radikal-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
