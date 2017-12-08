@@ -1,0 +1,40 @@
+
+<!-- <div > -->
+  <div class="background">
+    <div class="container">
+  
+      <h2 class="heading">Welcome!</h2>
+      <div class="line"></div>
+      <form [formGroup]="loginForm" (ngSubmit)="onsubmit(loginForm.value)">
+        <div class="group">
+          <input type="email" required class="empty" name="email" formControlName="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+           autocomplete="off">
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Username</label>
+          <div class="alert" *ngIf="loginForm.controls['email'].errors && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched || loginForm.controls['email'].pattern)">
+            <div [hidden] = "!loginForm.controls['email'].errors.required">User Name is Required</div>
+            <div [hidden] = "!loginForm.controls['email'].errors.pattern">User Name should be valid</div>
+          </div>
+          
+        </div>
+  
+        <div class="group">
+          <input type="password" required class="empty" name="password" formControlName="password" autocomplete="off" pattern="123456">
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Password</label>
+          <div class="alert" *ngIf="loginForm.controls['password'].errors && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched || loginForm.controls['password'].pattern)">
+              <div [hidden] = "!loginForm.controls['password'].errors.required">Password is Required</div>
+              <div [hidden] = "!loginForm.controls['password'].errors.pattern">Please Enter Correct Password</div>
+            </div>		
+        </div>
+        
+        <button type="submit" *ngIf="loginForm.controls['email'].valid && loginForm.controls['password'].valid" class="btn btn-success" >Login</button>
+        <button type="submit" *ngIf="(!loginForm.controls['email'].valid || !loginForm.controls['password'].valid)" class="btn btn-success" disabled>Login</button>
+        
+      </form>
+    </div>
+  </div>
+  <!-- </div> -->
+  

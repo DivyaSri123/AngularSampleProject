@@ -1,22 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// import { Router } from '@angular/router';
-// import { router } from './app.router';
+import { routes } from './app.router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-// import { SuccessComponent } from '../app/success/success.component';
+import { SuccessComponent } from './success/success.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    // SuccessComponent
+    SuccessComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    // router
+    routes
   ],
   providers: [],
   bootstrap: [AppComponent]
